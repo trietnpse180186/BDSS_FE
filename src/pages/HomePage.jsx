@@ -149,10 +149,9 @@ export default function HomePage() {
           <div className="bd-content-bottom">
             <div className="bottom-left">
               <div className="flip-card-inner">
-                <div className="content-front">
-                  <h3>Nên làm trước khi hiến máu</h3>
-                </div>
+                <div className="content-front"></div>
                 <div className="content-back">
+                  <h3>Trước khi hiến máu</h3>
                   <ul>
                     <li>
                       Đêm trước hiến máu không nên thức quá khuya (ngủ ít nhất 6
@@ -171,10 +170,9 @@ export default function HomePage() {
             </div>
             <div className="bottom-right">
               <div className="flip-card-inner">
-                <div className="content-front">
-                  <h3>Sau khi hiến máu</h3>
-                </div>
+                <div className="content-front"></div>
                 <div className="content-back">
+                  <h3>Sau khi hiến máu</h3>
                   <ul>
                     <li>Duỗi thẳng, hơi nâng cao cánh tay trong 15 phút.</li>
                     <li>Hạn chế gập tay trong quá trình nghỉ sau hiến máu.</li>
@@ -192,7 +190,7 @@ export default function HomePage() {
           </div>
         </div>
       </div>
-      <div className="home-footer">
+      <div className="footer">
         <div className="footer-content">
           <p>Bản quyền © 2025 Blood Donation. All rights reserved.</p>
         </div>
