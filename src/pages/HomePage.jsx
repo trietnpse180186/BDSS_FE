@@ -147,43 +147,56 @@ export default function HomePage() {
             </div>
           </div>
           <div className="bd-content-bottom">
-            <div className="bottom-left">
-              <div className="flip-card-inner">
-                <div className="content-front"></div>
-                <div className="content-back">
-                  <h3>Trước khi hiến máu</h3>
-                  <ul>
-                    <li>
-                      Đêm trước hiến máu không nên thức quá khuya (ngủ ít nhất 6
-                      tiếng).
-                    </li>
-                    <li>
-                      Nên ăn nhẹ, KHÔNG ăn các đồ ăn có nhiều đạm, nhiều mỡ.
-                    </li>
-                    <li>KHÔNG uống rượu, bia.</li>
-                    <li>Chuẩn bị tâm lý thực sự thoải mái.</li>
-                    <li>Mang theo giấy tờ tùy thân.</li>
-                    <li>Uống nhiều nước.</li>
-                  </ul>
+            <h2
+              style={{
+                fontSize: "2.5em",
+                fontFamily: "Roboto",
+                fontWeight: "bold",
+              }}
+            >
+              Những lưu ý quan trọng
+            </h2>
+            <div className="bottom-container">
+              <div className="bottom-left">
+                <div className="flip-card-inner">
+                  <div className="content-front"></div>
+                  <div className="content-back">
+                    <h3>Trước khi hiến máu</h3>
+                    <ul>
+                      <li>
+                        Đêm trước hiến máu không nên thức quá khuya (ngủ ít nhất
+                        6 tiếng).
+                      </li>
+                      <li>
+                        Nên ăn nhẹ, KHÔNG ăn các đồ ăn có nhiều đạm, nhiều mỡ.
+                      </li>
+                      <li>KHÔNG uống rượu, bia.</li>
+                      <li>Chuẩn bị tâm lý thực sự thoải mái.</li>
+                      <li>Mang theo giấy tờ tùy thân.</li>
+                      <li>Uống nhiều nước.</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="bottom-right">
-              <div className="flip-card-inner">
-                <div className="content-front"></div>
-                <div className="content-back">
-                  <h3>Sau khi hiến máu</h3>
-                  <ul>
-                    <li>Duỗi thẳng, hơi nâng cao cánh tay trong 15 phút.</li>
-                    <li>Hạn chế gập tay trong quá trình nghỉ sau hiến máu.</li>
-                    <li>Nghỉ tại điểm hiến máu tối thiểu 15 phút.</li>
-                    <li>Uống nhiều nước.</li>
-                    <li>Chỉ ra về khi cảm thấy thực sự thoải mái.</li>
-                    <li>
-                      Nếu vết băng cầm máu chảy máu, hãy nâng tay lên, ấn nhẹ
-                      vào vết bông, ngồi xuống và báo nhân viên y tế hỗ trợ.
-                    </li>
-                  </ul>
+              <div className="bottom-right">
+                <div className="flip-card-inner">
+                  <div className="content-front"></div>
+                  <div className="content-back">
+                    <h3>Sau khi hiến máu</h3>
+                    <ul>
+                      <li>Duỗi thẳng, hơi nâng cao cánh tay trong 15 phút.</li>
+                      <li>
+                        Hạn chế gập tay trong quá trình nghỉ sau hiến máu.
+                      </li>
+                      <li>Nghỉ tại điểm hiến máu tối thiểu 15 phút.</li>
+                      <li>Uống nhiều nước.</li>
+                      <li>Chỉ ra về khi cảm thấy thực sự thoải mái.</li>
+                      <li>
+                        Nếu vết băng cầm máu chảy máu, hãy nâng tay lên, ấn nhẹ
+                        vào vết bông, ngồi xuống và báo nhân viên y tế hỗ trợ.
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
