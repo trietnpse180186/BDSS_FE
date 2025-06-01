@@ -191,14 +191,26 @@
 /* Content Bottom */
 .bd-content-bottom {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(178, 60, 60, 0.772);
+  color: #fff;
+  margin-top: 50px;
+  padding-top: 50px;
+}
+.bottom-container {
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: rgba(138, 3, 3, 0.699);
   width: 100%;
   height: auto;
   gap: 50px;
-  padding: 50px;
-  margin-top: 5%;
+  padding: 10px;
+}
+.bd-content-bottom h2 {
+  display: flex;
+  justify-content: center;
 }
 .bottom-left,
 .bottom-right {
