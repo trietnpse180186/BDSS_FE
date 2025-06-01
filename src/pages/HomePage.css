@@ -3,6 +3,8 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.3s ease-in-out;
+  border: none;
+  outline: none;
 }
 .hd-component {
   display: flex;
@@ -86,7 +88,7 @@
   flex-direction: column;
   justify-content: space-between;
   margin: 50px 0;
-  padding: 50px;
+  padding: 50px 0;
   gap: 10px;
 }
 
@@ -147,7 +149,6 @@
   background-position: center;
   background-repeat: no-repeat;
   background-color: rgb(138, 3, 3);
-  box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.47);
   padding: 50px;
   width: 100%;
 }
