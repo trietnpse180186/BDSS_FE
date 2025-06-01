@@ -1,0 +1,80 @@
+.face {
+  background-image: url("src/images/BD-login.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #9ce1ed00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #cd0808;
+  background-color: #ffffff;
+  border-radius: 10px;
+  gap: 20px;
+  padding: 50px;
+}
+.content:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+.content h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5em;
+  color: rgb(19, 18, 18);
+  font-weight: bold;
+}
+.content span {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+}
+.link-no {
+  text-decoration: none;
+  color: rgb(7, 7, 7);
+  font-weight: bold;
+}
+.link-no:hover {
+  color: #6366f1;
+  text-decoration: underline;
+}
+.field-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.wrap-submit {
+  background-color: rgb(252, 77, 77);
+  color: white;
+  border: 1px solid #fdfdfd;
+  border-radius: 15px;
+  padding: 10px 120px;
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+.wrap-username {
+  width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.wrap-password {
+  width: 300px;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  font-size: 16px;
+}
