@@ -29,7 +29,23 @@ export default function FAQ() {
         "Tránh vận động mạnh trong 24 giờ đầu sau khi hiến máu.",
         "Theo dõi sức khỏe, nếu có triệu chứng bất thường thì liên hệ ngay với cơ sở y tế.",
       ],
-    }
+    },
+    {
+      question: "Nhóm máu A,B,O,AB có thể hiến cho nhóm máu nào?",
+      answer: [
+        "Người có nhóm máu O có thể cho máu cho tất cả các nhóm máu: O, A, B, AB. Đây là nhóm máu cho phổ quát.",
+        "Người có nhóm máu A có thể cho máu cho người có nhóm A và AB",
+        "Người có nhóm máu B có thể cho máu cho người có nhóm B và AB.",
+        "Người có nhóm máu AB chỉ có thể cho máu cho người có nhóm AB. Tuy nhiên, AB là nhóm nhận phổ quát, có thể nhận máu từ tất cả các nhóm máu (O, A, B, AB).",
+      ],
+    },
+    {
+      question: "Máu của tôi sẽ được làm những xét nghiệm gì?",
+      answer: [
+        "Người đã nhiễm hoặc đã thực hiện hành vi có nguy cơ nhiễm HIV, viêm gan B, viêm gan C, và các vius lây qua đường truyền máu.",
+        "Người có các bệnh mãn tính: tim mạch, huyết áp, hô hấp, dạ dày…",
+      ],
+    },
   ]
   return (
     <>
@@ -47,55 +63,56 @@ export default function FAQ() {
         />
         {/*Header------------------------------------------------*/}
         <div className="home-header">
-          <div className="hd-container">
-            <div className="hd-component">
-              <div className="slogan">
-                <em>Một giọt máu cho đi</em>
-                <em> Một cuộc đời ở lại</em>
-              </div>
-              <div className="logo">
-                <img src={logo} />
-              </div>
-              <div className="authorization">
-                <ul style={{ listStyleType: "none" }}>
-                  <li>
-                    <Link className="link-no" to="/login">
-                      Đăng nhập
-                    </Link>
-                  </li>
-                  <li style={{ color: "#6366f1" }}> | </li>
-                  <li>
-                    <Link className="link-no" to="/register">
-                      Đăng ký
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*Navbar------------------------------------------------*/}
-        <div className="nb-container">
-          <div className="nb-component">
-            <div className="item">
-              <Link to={"/"}>Trang chủ</Link>
-            </div>
-            <div className="item">
-              <a href="#">Đăng ký hiến máu</a>
-            </div>
-            <div className="item">
-              <Link to={"/FAQ"}>Hỏi Đáp</Link>
-            </div>
-            <div className="item">
-              <a href="#">Blog</a>
-            </div>
-            <div className="item">
-              <a href="#">Liên hệ</a>
-            </div>
-          </div>
-        </div>
+                  <div className="hd-container">
+                    <div className="hd-component">
+                      <div className="slogan">
+                        <em>Một giọt máu cho đi</em>
+                        <em> Một cuộc đời ở lại</em>
+                      </div>
+                      <div className="logo">
+                        <img src={logo} />
+                      </div>
+                      <div className="authorization">
+                        <ul style={{ listStyleType: "none" }}>
+                          <li>
+                            <Link className="link-no" to="/login">
+                              Đăng nhập
+                            </Link>
+                          </li>
+                          <li style={{ color: "#6366f1" }}> | </li>
+                          <li>
+                            <Link className="link-no" to="/register">
+                              Đăng ký
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/*Navbar------------------------------------------------*/}
+                <div className="nb-container">
+                  <div className="nb-component">
+                    <div className="item">
+                      <Link to={"/"}>Trang chủ</Link>
+                    </div>
+                    <div className="item">
+                      <a href="#">Đăng ký hiến máu</a>
+                    </div>
+                    <div className="item">
+                      <Link to={"/FAQ"}>Hỏi Đáp</Link>
+                    </div>
+                    <div className="item">
+                      <Link to={"/blog"}>Tin tức</Link>
+                    </div>
+                    <div className="item">
+                      <a href="#">Liên hệ</a>
+                    </div>
+                  </div>
+                </div>
         {/*Accordion------------------------------------------------*/}
         <div>
+          <h1 className="faq-title">Câu hỏi thường gặp</h1>
             <div className="faq-container">
               {ListFAQ.map((items, index) => (
                 <details key={index} className="faq-item">
