@@ -1,12 +1,21 @@
 import React from "react";
 import { FaBell, FaCog } from "react-icons/fa";
 import "./HomePage.css";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import logo from "../images/logo.jpeg";
 import image1 from "../images/image1.jpg";
+
 export default function HomePage() {
+  const user = JSON.parse(sessionStorage.getItem("user"));
+
+  const handleLogout = () => {
+    sessionStorage.removeItem("user");
+    window.location.reload();
+  };
+
   return (
     <>
+      {/* Font links */}
       <link
         href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins&display=swap"
         rel="stylesheet"
@@ -19,8 +28,9 @@ export default function HomePage() {
         href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
         rel="stylesheet"
       />
-      <body style={{ overflow: "initial" }}>
-        {/*Header------------------------------------------------*/}
+
+      <div style={{ overflow: "initial" }}>
+        {/* Header */}
         <div className="home-header">
           <div className="hd-container">
             <div className="hd-component">
@@ -33,36 +43,59 @@ export default function HomePage() {
               </div>
               <div className="authorization">
                 <ul style={{ listStyleType: "none" }}>
-                  <li>
-                    <Link className="link-no" to="/login">
-                      Đăng nhập
-                    </Link>
-                  </li>
-                  <li style={{ color: "#6366f1" }}> | </li>
-                  <li>
-                    <Link className="link-no" to="/register">
-                      Đăng ký
-                    </Link>
-                  </li>
+                  {!user ? (
+                    <>
+                      <li>
+                        <Link className="link-no" to="/login">
+                          Đăng nhập
+                        </Link>
+                      </li>
+                      <li style={{ color: "#6366f1" }}> | </li>
+                      <li>
+                        <Link className="link-no" to="/register">
+                          Đăng ký
+                        </Link>
+                      </li>
+                    </>
+                  ) : (
+                    <>
+                      <li>Xin chào, <strong>{user.fullname}</strong></li>
+                      <li style={{ color: "#6366f1" }}> | </li>
+                      <li>
+                        <button
+                          onClick={handleLogout}
+                          style={{
+                            background: "none",
+                            border: "none",
+                            color: "#6366f1",
+                            cursor: "pointer",
+                          }}
+                        >
+                          Đăng xuất
+                        </button>
+                      </li>
+                    </>
+                  )}
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        {/*Navbar------------------------------------------------*/}
+
+        {/* Navbar */}
         <div className="nb-container">
           <div className="nb-component">
             <div className="item">
-              <Link to={"/"}>Trang chủ</Link>
+              <Link to="/">Trang chủ</Link>
             </div>
             <div className="item">
-              <a href="#">Đăng ký hiến máu</a>
+              <Link to="/donor-register">Đăng ký hiến máu</Link>
             </div>
             <div className="item">
-              <Link to={"/FAQ"}>Hỏi Đáp</Link>
+              <Link to="/FAQ">Hỏi Đáp</Link>
             </div>
             <div className="item">
-              <Link to={"/blog"}>Tin tức</Link>
+              <Link to="/blog">Tin tức</Link>
             </div>
             <div className="item">
               <a href="#">Liên hệ</a>
@@ -70,19 +103,42 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/*Body------------------------------------------------*/}
+        {/* Body */}
         <div className="home-body">
           <div className="bd-banner"></div>
+
+          {/* Thông tin người dùng nếu đã đăng ký */}
+          {user && (
+            <div
+              style={{
+                padding: "20px",
+                backgroundColor: "#fff0f0",
+                borderRadius: "10px",
+                margin: "20px auto",
+                maxWidth: "800px",
+                boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                color: "#333",
+              }}
+            >
+              <h2 style={{ color: "#c0392b" }}>Thông tin người đăng ký</h2>
+              <ul style={{ listStyleType: "none", paddingLeft: 0, lineHeight: "1.8" }}>
+                <li><strong>Họ tên:</strong> {user.fullname}</li>
+                <li><strong>Ngày sinh:</strong> {user.dob}</li>
+                <li><strong>Giới tính:</strong> {user.gender}</li>
+                <li><strong>CCCD:</strong> {user.cccd}</li>
+                <li><strong>Điện thoại:</strong> {user.phone}</li>
+                <li><strong>Địa chỉ:</strong> {user.address}</li>
+                <li><strong>Nghề nghiệp:</strong> {user.job}</li>
+              </ul>
+            </div>
+          )}
+
           <div className="bd-content">
             <div className="bd-content-above">
               <div className="content-above-left">
                 <img src={image1} alt="Benefits" />
               </div>
               <div className="content-above-right">
-                <link
-                  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
-                  rel="stylesheet"
-                />
                 <h3
                   style={{
                     fontFamily: "Roboto",
@@ -99,11 +155,11 @@ export default function HomePage() {
                   <li>Mang lại niềm vui và ý nghĩa nhân đạo.</li>
                 </ul>
                 <p style={{ color: "rgb(216, 216, 216)", fontWeight: "bold" }}>
-                  {" "}
-                  “Một giọt máu cho đi – Một cuộc đời ở lại”{" "}
+                  “Một giọt máu cho đi – Một cuộc đời ở lại”
                 </p>
               </div>
             </div>
+
             <div className="bd-content-wrapper">
               <h3>Điều kiện đạt chuẩn để được hiến máu</h3>
               <div className="content-1">
@@ -147,6 +203,7 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+
             <div className="bd-content-bottom">
               <h2
                 style={{
@@ -207,12 +264,14 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
+        {/* Footer */}
         <div className="footer">
           <div className="footer-content">
             <p>Bản quyền © 2025 Blood Donation. All rights reserved.</p>
           </div>
         </div>
-      </body>
+      </div>
     </>
   );
 }
