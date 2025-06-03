@@ -4,6 +4,8 @@ import HomePage from "../pages/HomePage";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import FAQ from "../pages/FAQ";
+import Blog from "../pages/Blog";
+// import BlogSection from "../components/BlogSection"; // Uncomment if you want to use BlogSection
 export default function WebRoutes() {
   return (
     <Routes>
@@ -11,6 +13,8 @@ export default function WebRoutes() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/FAQ" element={<FAQ />} />
+      <Route path="/blog" element={<Blog />} />
+      {/* <Route path="/blog-section" element={<BlogSection />} /> Uncomment if you want to use BlogSection */}
     </Routes>
   );
 }

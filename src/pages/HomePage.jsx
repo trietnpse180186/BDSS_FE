@@ -62,7 +62,7 @@ export default function HomePage() {
               <Link to={"/FAQ"}>Hỏi Đáp</Link>
             </div>
             <div className="item">
-              <a href="#">Blog</a>
+              <Link to={"/blog"}>Tin tức</Link>
             </div>
             <div className="item">
               <a href="#">Liên hệ</a>
