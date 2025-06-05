@@ -308,46 +308,36 @@ export default function HomePage() {
           </div>
         </div>
         <div className="overlap-group4">
-          <div className="rectangle-5" />
-
-          <p className="m-tr-c-khi-hi-n-m-u">
-            Đêm trước khi hiến máu không nên thức quá khuya (ngủ ít nhất 6
-            tiếng).
-            <br />
-            Nên ăn nhẹ, không ăn các đồ ăn có nhiều đạm, nhiều mỡ.
-            <br />
-            Không uống rượu, bia.
-            <br />
-            Chuẩn bị tâm lý thực sự thoải mái.
-            <br />
-            Mang theo giấy tờ tùy thân.
-            <br />
-            Uống nhiều nước.
-          </p>
-
-          <p className="du-i-th-ng-h-i-n-ng">
-            Duỗi thẳng, hơi nâng cao cánh tay trong 15 phút.
-            <br />
-            Hạn chế gập tay trong quá trình nghỉ sau hiến máu.
-            <br />
-            Nghỉ tại điểm hiến máu tối thiểu 15 phút.
-            <br />
-            Uống nhiều nước.
-            <br />
-            Chỉ ra về khi cảm thấy thực sự thoải mái.
-            <br />
-            Nếu vết băng cầm máu chảy máu, hãy nâng tay lên, ấn nhẹ vào vết
-            bông, ngồi xuống và báo nhân viên y tế hỗ trợ.
-          </p>
-
-          <div className="rectangle-6" />
-
-          <p className="tr-c-khi-hi-n-m-u">&lt; Trước khi hiến máu</p>
-
-          <p className="sau-khi-hi-n-m-u">Sau khi hiến máu &gt;</p>
+          <div className="overlap-group4-content">
+            <h2 style={{ color: "rgb(35, 108, 218)" }}>Trước khi hiến máu</h2>
+            <ul>
+              <li>
+                Đêm trước khi hiến máu không nên thức quá khuya (ngủ ít nhất 6
+                tiếng).
+              </li>
+              <li>Nên ăn nhẹ, không ăn các đồ ăn có nhiều đạm, nhiều mỡ.</li>
+              <li>Không uống rượu, bia.</li>
+              <li>Chuẩn bị tâm lý thực sự thoải mái.</li>
+              <li>Mang theo giấy tờ tùy thân.</li>
+              <li>Uống nhiều nước.</li>
+            </ul>
+          </div>
+          <div className="overlap-group4-content">
+            <h2 style={{ color: "rgb(218, 35, 35)" }}>Sau khi hiến máu</h2>
+            <ul>
+              <li>Duỗi thẳng, hơi nâng cao cánh tay trong 15 phút.</li>
+              <li>Hạn chế gập tay trong quá trình nghỉ sau hiến máu.</li>
+              <li>Nghỉ tại điểm hiến máu tối thiểu 15 phút.</li>
+              <li>Uống nhiều nước.</li>
+              <li>Chỉ ra về khi cảm thấy thực sự thoải mái.</li>
+              <li>
+                Nếu vết băng cầm máu chảy máu, hãy nâng tay lên, ấn nhẹ vào vết
+                bông, ngồi xuống và báo nhân viên y tế hỗ trợ.
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-
+        {/*Footer*/}
         <div className="footer">
           <div className="footer-content">
             <div className="footer-contact">
