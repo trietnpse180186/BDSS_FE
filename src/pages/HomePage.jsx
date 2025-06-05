@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../images/logo.jpeg";
 import banner2 from "../images/banner2.jpeg";
 import image1 from "../images/image1.jpg";
 import "./HomePage.css";
 import { Link } from "react-router";
 export default function HomePage() {
+  const [username, setUsername] = useState(null);
+
+  useEffect(() => {
+    const loadUser = () => {
+      try {
+        const userData = localStorage.getItem("user");
+        if (!userData || userData === "undefined") return;
+        const user = JSON.parse(userData);
+        setUsername(user?.fullName || "Người dùng");
+      } catch (err) {
+        console.error("Lỗi phân tích user:", err);
+        localStorage.removeItem("user");
+      }
+    };
+    loadUser();
+  }, []);
   return (
     <>
       <div className="home-page">
@@ -96,7 +112,6 @@ export default function HomePage() {
                   </Link>
                 </div>
                 <div className="text-wrapper">
-                  {/* Person Circle Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -111,12 +126,16 @@ export default function HomePage() {
                       d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"
                     />
                   </svg>
-                  <Link
-                    style={{ textDecoration: "none", color: "#828282" }}
-                    to="/login"
-                  >
-                    Đăng nhập
-                  </Link>
+                  {username ? (
+                    <h2>{username}</h2>
+                  ) : (
+                    <Link
+                      style={{ textDecoration: "none", color: "#828282" }}
+                      to="/login"
+                    >
+                      Đăng nhập
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
