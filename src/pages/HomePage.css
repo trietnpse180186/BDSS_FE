@@ -204,6 +204,32 @@
   color: #333;
   line-height: 1.4;
 }
+.overlap-group4 {
+  display: flex;
+  justify-content: center;
+  margin: 100px 0px 50px 10px;
+  gap: 10px;
+}
+
+.overlap-group4-content {
+  font-size: 1.15em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 50px;
+  background-image: url("../images/image3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.overlap-group4-content h2 {
+}
+.overlap-group4-content ul {
+  padding: 30px;
+}
+.overlap-group4-content ul li {
+  padding: 10px;
+}
 
 .footer {
   display: flex;
