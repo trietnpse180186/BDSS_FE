@@ -274,7 +274,7 @@ export default function HomePage() {
             <div className="group-header">
               <img className="jimeng" alt="Jimeng" src={logo} />
               <div className="navbar">
-                <div className="text-wrapper">
+                <div className="text-wrapper" id="home-wrapper">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -287,7 +287,7 @@ export default function HomePage() {
                     <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z" />
                   </svg>
                   <Link
-                    style={{ textDecoration: "none", color: "#828282" }}
+                    style={{ textDecoration: "none", color: "#b5332b" }}
                     to="/"
                   >
                     Trang chủ
