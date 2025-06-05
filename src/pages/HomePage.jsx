@@ -161,7 +161,7 @@ export default function HomePage() {
           </div>
           <img
             data-aos="fade-right"
-            data-aos-duration="800"
+            data-aos-duration="710"
             data-aos-delay="200"
             data-aos-easing="ease-in-out"
             className="img"
@@ -172,7 +172,13 @@ export default function HomePage() {
 
         <div className="overlap-group3">
           <div className="group3-row1">
-            <div className="overlap-group3-content">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="720"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+              className="overlap-group3-content"
+            >
               <p className="text-wrapper-10">
                 Kết quả test nhanh âm tính với kháng nguyên bề mặt của siêu vi B
               </p>
@@ -196,7 +202,13 @@ export default function HomePage() {
                 />
               </svg>
             </div>
-            <div className="overlap-group3-content">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="730"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+              className="overlap-group3-content"
+            >
               <p className="text-wrapper-11">
                 Không nghiện ma túy, rượu bia và các chất kích thích
               </p>
@@ -214,7 +226,13 @@ export default function HomePage() {
               </svg>
             </div>
 
-            <div className="overlap-group3-content">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="740"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+              className="overlap-group3-content"
+            >
               <p className="text-wrapper-12">
                 Người khỏe mạnh trong độ tuổi từ đủ 18 đến 60 tuổi
               </p>
@@ -231,10 +249,24 @@ export default function HomePage() {
                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
               </svg>
             </div>
-            <p className="overlap-group3-title">Tiêu chuẩn để được hiến máu</p>
+            <p
+              data-aos="fade-in"
+              data-aos-duration="750"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+              className="overlap-group3-title"
+            >
+              Tiêu chuẩn để được hiến máu
+            </p>
           </div>
           <div className="group3-row2">
-            <div className="overlap-group3-content">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="760"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+              className="overlap-group3-content"
+            >
               <p className="text-wrapper-10">
                 Cân nặng: Nam ≥ 45 kg Nữ ≥ 45 kg
               </p>
@@ -251,7 +283,13 @@ export default function HomePage() {
               </svg>
             </div>
 
-            <div className="overlap-group3-content">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="770"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+              className="overlap-group3-content"
+            >
               <p className="text-wrapper-11">
                 Không mắc các bệnh truyền nhiễm qua đường máu
               </p>
@@ -268,7 +306,13 @@ export default function HomePage() {
               </svg>
             </div>
 
-            <div className="overlap-group3-content">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="780"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+              className="overlap-group3-content"
+            >
               <p className="text-wrapper-11">
                 Không mắc các bệnh lý mãn tính hoặc cấp tính về tim mạch huyết
                 áp, gan, hô hấp,...
@@ -287,7 +331,13 @@ export default function HomePage() {
               </svg>
             </div>
 
-            <div className="overlap-group3-content">
+            <div
+              data-aos="fade-in"
+              data-aos-duration="800"
+              data-aos-delay="200"
+              data-aos-easing="ease-in-out"
+              className="overlap-group3-content"
+            >
               <p className="text-wrapper-13">
                 Thời gian tối thiểu giữa 2 lần hiến máu là 12 tuần đối với cả
                 Nam và Nữ
