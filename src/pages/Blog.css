@@ -1,50 +1,102 @@
-.blog-layout {
-  display: flex;
-  grid-template-columns: 1fr 3fr 1fr;
-  gap: 20px;
+
+.home-header {
+  background-color: #c0050f; 
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hd-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #f3f4f6;
+  padding: 16px 24px;
 }
 
-.left-sidebar,
-.right-sidebar {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.hd-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.right-sidebar img {
-  width: 100%;
-  margin-bottom: 10px;
-  border-radius: 8px;
+.logo img {
+  height: 50px;
+  background-color: white;         /* Tạo nền tròn trắng */
+  border-radius: 50%;              /* Bo tròn */
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
 }
 
-.blog-container {
-  padding: 0 10px;
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #ffffff; /* Chữ trắng */
+  transition: color 0.3s ease;
 }
 
-.blog-title {
+.nav-links a:hover {
+  color: #d3f3e2; /* Màu xanh nhạt khi hover */
+}
+
+/* Hero banner */
+.blog-hero {
+  background-image: url("https://media.istockphoto.com/id/1329063308/photo/hand-donate-blood-with-red-heart-on-bed-in-hospital.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  border-radius: 16px;
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #b91c1c;
+  max-width: 800px;
+  color: white;
+}
+
+.overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+}
+
+.overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.donate-btn {
+  background-color: #dc2626;
+  padding: 12px 24px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.donate-btn:hover {
+  background-color: #b91c1c;
+}
+
+/* Blog layout */
+.blog-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
 }
 
 .posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: 30px;
 }
 
 .post-card {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.95);
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -58,9 +110,8 @@
 
 .post-card img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  display: block;
 }
 
 .post-content {
@@ -72,7 +123,6 @@
   color: #111827;
   font-size: 1.2rem;
   font-weight: 600;
-  transition: color 0.3s ease;
 }
 
 .post-title-link:hover {
