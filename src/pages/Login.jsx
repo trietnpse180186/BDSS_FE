@@ -1,50 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Login.css";
-import { Link } from "react-router";
-export default function Login() {
+
+export default function LoginForm() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/api/auth/login",
+        {
+          email,
+          password,
+        }
+      );
+
+      const { token, user } = response.data;
+
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
+
+      navigate("/");
+    } catch (error) {
+      console.error("Login error:", error);
+      alert(
+        "Đăng nhập không thành công. Vui lòng kiểm tra lại tài khoản và mật khẩu."
+      );
+    }
+  };
+
   return (
     <>
-      <div className="face">
-        <div className="content">
-          <h1>Đăng nhập</h1>
-          <form onsubmit="event.preventDefault()">
-            <div className="field-wrapper">
-              <input
-                className="wrap-username"
-                type="text"
-                name="username"
-                placeholder="Căn cước công dân"
-              />
-            </div>
-            <div className="field-wrapper">
-              <input
-                className="wrap-password"
-                type="password"
-                name="password"
-                placeholder="Mật khẩu"
-              />
-            </div>
-            <br></br>
-            <div className="field-wrapper">
-              <input
-                className="wrap-submit"
-                type="submit"
-                value="Đăng nhập"
-                onClick={() => alert("Cảm ơn bạn đã đăng nhập!")}
-              />
-            </div>
-            <br></br>
-            <span>
-              <Link to={"/register"} className="link-no">
-                Đăng ký ở đây!
-              </Link>
-            </span>
-          </form>
-          <Link to={"/"} className="link-no">
-            Trang chủ
-          </Link>
-        </div>
-      </div>
+      <form className="login-wrapper" onSubmit={handleSubmit}>
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          required
+        />
+        <input
+          type="password"
+          placeholder="Mật khẩu"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          required
+        />
+        <button type="submit">Đăng nhập</button>
+      </form>
+      <Link to="/register">Đăng ký</Link>
     </>
   );
 }
