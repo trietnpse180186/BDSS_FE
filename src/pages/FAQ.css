@@ -90,3 +90,6 @@ details[open] .faq-question::after {
 .faq-answer li {
   margin-bottom: 10px;
 }
+#FAQ-wrapper {
+  color: #b5332b;
+}
