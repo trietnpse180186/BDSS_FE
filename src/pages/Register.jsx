@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import "./Register.css";
 
 export default function Register() {
@@ -132,11 +132,7 @@ export default function Register() {
         <br />
 
         <div className="field-wrapper">
-          <input
-            className="wrap-submit"
-            type="submit"
-            value="Đăng ký"
-          />
+          <input className="wrap-submit" type="submit" value="Đăng ký" />
         </div>
 
         <br />
