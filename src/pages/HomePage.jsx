@@ -159,7 +159,15 @@ export default function HomePage() {
               Xem thêm
             </Link>
           </div>
-          <img className="img" alt="Ellipse" src={image1} />
+          <img
+            data-aos="fade-right"
+            data-aos-duration="800"
+            data-aos-delay="200"
+            data-aos-easing="ease-in-out"
+            className="img"
+            alt="Ellipse"
+            src={image1}
+          />
         </div>
 
         <div className="overlap-group3">
@@ -179,11 +187,11 @@ export default function HomePage() {
                 className="icon-instance-node"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5z"
                 />
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5zm4 5.982c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018"
                 />
               </svg>
@@ -223,7 +231,7 @@ export default function HomePage() {
                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
               </svg>
             </div>
-            <p className="text-wrapper-14">Tiêu chuẩn để được hiến máu</p>
+            <p className="overlap-group3-title">Tiêu chuẩn để được hiến máu</p>
           </div>
           <div className="group3-row2">
             <div className="overlap-group3-content">
@@ -296,6 +304,100 @@ export default function HomePage() {
                 <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857z" />
                 <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2m3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
               </svg>
+            </div>
+          </div>
+        </div>
+        <div className="overlap-group4">
+          <div className="rectangle-5" />
+
+          <p className="m-tr-c-khi-hi-n-m-u">
+            Đêm trước khi hiến máu không nên thức quá khuya (ngủ ít nhất 6
+            tiếng).
+            <br />
+            Nên ăn nhẹ, không ăn các đồ ăn có nhiều đạm, nhiều mỡ.
+            <br />
+            Không uống rượu, bia.
+            <br />
+            Chuẩn bị tâm lý thực sự thoải mái.
+            <br />
+            Mang theo giấy tờ tùy thân.
+            <br />
+            Uống nhiều nước.
+          </p>
+
+          <p className="du-i-th-ng-h-i-n-ng">
+            Duỗi thẳng, hơi nâng cao cánh tay trong 15 phút.
+            <br />
+            Hạn chế gập tay trong quá trình nghỉ sau hiến máu.
+            <br />
+            Nghỉ tại điểm hiến máu tối thiểu 15 phút.
+            <br />
+            Uống nhiều nước.
+            <br />
+            Chỉ ra về khi cảm thấy thực sự thoải mái.
+            <br />
+            Nếu vết băng cầm máu chảy máu, hãy nâng tay lên, ấn nhẹ vào vết
+            bông, ngồi xuống và báo nhân viên y tế hỗ trợ.
+          </p>
+
+          <div className="rectangle-6" />
+
+          <p className="tr-c-khi-hi-n-m-u">&lt; Trước khi hiến máu</p>
+
+          <p className="sau-khi-hi-n-m-u">Sau khi hiến máu &gt;</p>
+        </div>
+      </div>
+
+        <div className="footer">
+          <div className="footer-content">
+            <div className="footer-contact">
+              <h1>Liên hệ</h1>
+              <div className="contact-info">
+                <div className="info-address">
+                  <h3>Trung tâm hiến máu nhân đạo</h3>
+                  <p>
+                    466 Nguyễn Thị Minh Khai, Phường 2, Quận 3, Thành phố Hồ Chí
+                    Minh
+                  </p>
+                  <p>
+                    106 Thiên Phước, Phường 9, Tân Bình, Thành phố Hồ Chí Minh
+                  </p>
+                </div>
+                <div className="info-phone">
+                  <p>028 3868 5509</p>
+                  <p>028 3868 5507</p>
+                </div>
+              </div>
+              <div className="contact-info">
+                <div className="info-address">
+                  <h3>Bệnh viện BTH</h3>
+                  <p>
+                    118 Đ. Hồng Bàng, Phường 12, Quận 5, Thành phố Hồ Chí Minh
+                  </p>
+                  <p>
+                    24 Nguyễn Thị Diệu, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ
+                    Chí Minh
+                  </p>
+                </div>
+                <div className="info-phone">
+                  <p>028 39571342</p>
+                  <p>028 39557858</p>
+                </div>
+              </div>
+              <div className="contact-info">
+                <div className="info-address">
+                  <h3>Trung tâm truyền máu Chợ Rẫy</h3>
+                  <p>
+                    56 Phạm Hữu Chí, Phường 12, Quận 5, Thành phố Hồ Chí Minh
+                  </p>
+                </div>
+                <div className="info-phone">
+                  <p>028 39555885</p>
+                </div>
+              </div>
+            </div>
+            <div className="footer-copywrite">
+              <h1></h1>
             </div>
           </div>
         </div>
