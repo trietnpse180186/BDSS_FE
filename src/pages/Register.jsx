@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router"; 
 import "./Register.css";
+import axios from "axios";
 
 export default function Register() {
   const [formData, setFormData] = useState({
-    fullname: "",
-    dob: "",
-    gender: "",
-    cccd: "",
-    phone: "",
+    fullName: "",
+    birthday: "",
+    sex: "",
+    email: "",
+    password: "",
+    phoneNumber: "",
     address: "",
-    job: "",
+    bloodType: "",
+    occupation: "",
   });
 
   const handleChange = (e) => {
@@ -21,17 +24,20 @@ export default function Register() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Lưu vào sessionStorage
-    sessionStorage.setItem("user", JSON.stringify(formData));
-
-    // Hiện alert xác nhận
-    alert("Cảm ơn bạn đã đăng ký!");
-
-    // Có thể thêm gọi API tại đây nếu cần:
-    // fetch("/api/register", { method: "POST", body: JSON.stringify(formData), headers: { ... } });
+    try {
+      const response = await axios.post(
+        "http://localhost:8080/api/users/register",
+        formData
+      );
+      alert("Đăng ký thành công!");
+      console.log("Server trả về:", response.data);
+    } catch (error) {
+      console.error("Đăng ký lỗi:", error);
+      alert("Đăng ký thất bại. Hãy kiểm tra lại thông tin.");
+    }
   };
 
   return (
@@ -42,9 +48,9 @@ export default function Register() {
         <div className="field-wrapper">
           <input
             type="text"
-            name="fullname"
+            name="fullName"
             placeholder="Họ tên"
-            value={formData.fullname}
+            value={formData.fullName}
             onChange={handleChange}
             required
           />
@@ -53,9 +59,8 @@ export default function Register() {
         <div className="field-wrapper">
           <input
             type="date"
-            name="dob"
-            placeholder="Ngày sinh"
-            value={formData.dob}
+            name="birthday"
+            value={formData.birthday}
             onChange={handleChange}
             required
           />
@@ -65,32 +70,43 @@ export default function Register() {
           <label>
             <input
               type="radio"
-              name="gender"
-              value="Nam"
-              checked={formData.gender === "Nam"}
+              name="sex"
+              value="Male"
+              checked={formData.sex === "Male"}
               onChange={handleChange}
               required
-            />{" "}
+            />
             Nam
           </label>
           <label style={{ marginLeft: "10px" }}>
             <input
               type="radio"
-              name="gender"
-              value="Nữ"
-              checked={formData.gender === "Nữ"}
+              name="sex"
+              value="Female"
+              checked={formData.sex === "Female"}
               onChange={handleChange}
-            />{" "}
+            />
             Nữ
           </label>
         </div>
 
         <div className="field-wrapper">
           <input
-            type="text"
-            name="cccd"
-            placeholder="Số CCCD"
-            value={formData.cccd}
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="field-wrapper">
+          <input
+            type="password"
+            name="password"
+            placeholder="Mật khẩu"
+            value={formData.password}
             onChange={handleChange}
             required
           />
@@ -99,9 +115,9 @@ export default function Register() {
         <div className="field-wrapper">
           <input
             type="text"
-            name="phone"
+            name="phoneNumber"
             placeholder="Số điện thoại"
-            value={formData.phone}
+            value={formData.phoneNumber}
             onChange={handleChange}
             required
           />
@@ -119,11 +135,30 @@ export default function Register() {
         </div>
 
         <div className="field-wrapper">
+          <select
+            name="bloodType"
+            value={formData.bloodType}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Chọn nhóm máu</option>
+            <option value="A_POSITIVE">A+</option>
+            <option value="A_NEGATIVE">A-</option>
+            <option value="B_POSITIVE">B+</option>
+            <option value="B_NEGATIVE">B-</option>
+            <option value="O_POSITIVE">O+</option>
+            <option value="O_NEGATIVE">O-</option>
+            <option value="AB_POSITIVE">AB+</option>
+            <option value="AB_NEGATIVE">AB-</option>
+          </select>
+        </div>
+
+        <div className="field-wrapper">
           <input
             type="text"
-            name="job"
+            name="occupation"
             placeholder="Nghề nghiệp"
-            value={formData.job}
+            value={formData.occupation}
             onChange={handleChange}
             required
           />
