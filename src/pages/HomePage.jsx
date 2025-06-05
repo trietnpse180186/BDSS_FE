@@ -8,13 +8,6 @@ import logo from "../images/logo.jpeg";
 import image1 from "../images/image1.jpg";
 
 export default function HomePage() {
-  const user = JSON.parse(sessionStorage.getItem("user"));
-
-  const handleLogout = () => {
-    sessionStorage.removeItem("user");
-    window.location.reload();
-  };
-
   return (
     <>
       {/* Font links */}
