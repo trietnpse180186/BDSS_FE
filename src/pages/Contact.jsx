@@ -183,43 +183,57 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        <div className="contact-infor">
-          <div className="contact-infor-left">
-            {/* Thông tin để tạm chưa biết đưa nội dung gì vào*/}
-            <h3>THÔNG TIN LIÊN HỆ</h3>
-            <br />
-            <div className="text-left">
-              <p>
-                Địa chỉ: Số 1, đường ABC, Phường XYZ, Quận 123, Thành phố Hồ Chí
-                Minh
-              </p>
-              <p>
-                Giờ làm việc: Thứ Hai - Thứ Sáu: 8:00 - 17:00
-                <br />
-                Thứ Bảy: 8:00 - 12:00
-                <br />
-                Chủ Nhật: Nghỉ
-              </p>
+        {/*Footer*/}
+        <div className="footer">
+          <div className="footer-content">
+            <div className="footer-contact">
+              <h1>Liên hệ</h1>
+              <div className="contact-info">
+                <div className="info-address">
+                  <h3>Trung tâm hiến máu nhân đạo</h3>
+                  <p>
+                    466 Nguyễn Thị Minh Khai, Phường 2, Quận 3, Thành phố Hồ Chí
+                    Minh
+                  </p>
+                  <p>
+                    106 Thiên Phước, Phường 9, Tân Bình, Thành phố Hồ Chí Minh
+                  </p>
+                </div>
+                <div className="info-phone">
+                  <p>028 3868 5509</p>
+                  <p>028 3868 5507</p>
+                </div>
+              </div>
+              <div className="contact-info">
+                <div className="info-address">
+                  <h3>Bệnh viện BTH</h3>
+                  <p>
+                    118 Đ. Hồng Bàng, Phường 12, Quận 5, Thành phố Hồ Chí Minh
+                  </p>
+                  <p>
+                    24 Nguyễn Thị Diệu, Phường Võ Thị Sáu, Quận 3, Thành phố Hồ
+                    Chí Minh
+                  </p>
+                </div>
+                <div className="info-phone">
+                  <p>028 39571342</p>
+                  <p>028 39557858</p>
+                </div>
+              </div>
+              <div className="contact-info">
+                <div className="info-address">
+                  <h3>Trung tâm truyền máu Chợ Rẫy</h3>
+                  <p>
+                    56 Phạm Hữu Chí, Phường 12, Quận 5, Thành phố Hồ Chí Minh
+                  </p>
+                </div>
+                <div className="info-phone">
+                  <p>028 39555885</p>
+                </div>
+              </div>
             </div>
-          </div>
-          <div className="contact-infor-right">
-            <h3>LIÊN HỆ VỚI CHÚNG TÔI</h3>
-            <br />
-            <div className="text-right">
-              <p>
-                Email: <a href="mailto:gmd@gmail.vn">gmd@gmail.vn</a>
-              </p>
-              <p>Hotline</p>
-
-              <p>
-                TT Hiến Máu Nhân Đạo: <a href="tel:11111111111">11111111111</a>
-              </p>
-              <p>
-                Bệnh viện BTH: <a href="tel:22222222222">22222222222</a>
-              </p>
-              <p>
-                TT Truyền Máu: <a href="tel:3333333333">3333333333</a>
-              </p>
+            <div className="footer-copywrite">
+              <h1></h1>
             </div>
           </div>
         </div>
