@@ -133,14 +133,13 @@ export default function Contact() {
             className="contact-header-form"
             style={{
               position: "absolute",
-              top: "15%",
+              top: "8%",
               right: "8%",
               color: "white",
               padding: "30px",
               borderRadius: "8px",
               maxWidth: "500px",
-              height: "400px",
-              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+              height: "480px",
             }}
           >
             <h1>Bạn cần hỗ trợ?</h1>
@@ -179,13 +178,8 @@ export default function Contact() {
                 style={{ width: "300px", height: "45px", margin: "10px 0px" }}
               />
             </div>
-            <div className="form-text">
-              <input
-                className="form-submit"
-                type="submit"
-                value="Gửi lời nhắn"
-                style={{ width: "130px", height: "30px", margin: "5px 20px" }}
-              />
+            <div className="form-submit">
+              <button className="button">Gửi lời nhắn</button>
             </div>
           </div>
         </div>
@@ -229,7 +223,6 @@ export default function Contact() {
             </div>
           </div>
         </div>
-        
       </div>
     </>
   );
