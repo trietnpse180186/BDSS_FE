@@ -1,8 +1,14 @@
 #contact-wrapper {
   color: #b5332b;
 }
+
+.contact{
+  font-family: "Roboto", sans-serif;
+}
+
 .contact-header-form {
-  font-family: "Times New Roman", Times, serif;
+  background-color: #00000033;
+  box-shadow: "0 4px 12px rgba(0,0,0,0.3)";
 }
 .contact-infor {
   display: grid;
@@ -24,7 +30,6 @@
 .form-text {
   font-size: 20px;
 }
-
 .form-input {
   background: transparent;
   border: 1.5px solid #ffffff; /* hoặc bất kỳ màu nào bạn muốn */
@@ -33,7 +38,25 @@
   border-radius: 4px;
 }
 .form-submit {
-  background-color: #b5332b;
+  height: 100%;
+}
+.button {
+  width: 140px;
+  height: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+  background: transparent;
+  border: 1.5px solid #ffffff;
+  border-radius: 4px;
+  color: #fbfbfb;
+  margin-top: 10px;
+}
+.button:hover {
+  background: #ead6d6;
+  color: #000000;
 }
 .contact-infor {
   padding: 30px;
