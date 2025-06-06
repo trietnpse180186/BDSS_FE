@@ -2,6 +2,7 @@ import React from "react";
 import "./Contact.css";
 import { Link } from "react-router";
 import logo from "../images/logo.jpeg";
+import contact1 from "../images/contact1.jpg";
 
 export default function Contact() {
   return (
@@ -117,7 +118,119 @@ export default function Contact() {
         </div>
       </div>
       {/*-------------------Contact-----------------------*/}
-      <h1>Hello</h1>
+      <div className="contact">
+        <div className="contact-header-img" style={{ position: "relative" }}>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src={contact1}
+              alt="Contact"
+              style={{
+                width: "100%",
+              }}
+            />
+          </div>
+          <div
+            className="contact-header-form"
+            style={{
+              position: "absolute",
+              top: "15%",
+              right: "8%",
+              color: "white",
+              padding: "30px",
+              borderRadius: "8px",
+              maxWidth: "500px",
+              height: "400px",
+              boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+            }}
+          >
+            <h1>Bạn cần hỗ trợ?</h1>
+            <br />
+            <p>
+              Hãy để lại thông tin và thắc mắc của bạn, hoặc có thể liên hệ qua
+              hotline phía bên dưới.
+            </p>
+            <br />
+            <div className="form-text">
+              <label>Họ và Tên</label>
+              <br />
+              <input
+                className="form-input"
+                type="text"
+                style={{ width: "300px", height: "45px", margin: "10px 0px" }}
+                placeholder="Vd: Nguyen Van A"
+              />
+            </div>
+            <div className="form-text">
+              <label>Email</label>
+              <br />
+              <input
+                className="form-input"
+                type="text"
+                style={{ width: "300px", height: "45px", margin: "10px 0px" }}
+                placeholder="Vd: gmd@gmail.vn"
+              />
+            </div>
+            <div className="form-text">
+              <label>Lời nhắn</label>
+              <br />
+              <input
+                className="form-input"
+                type="text"
+                style={{ width: "300px", height: "45px", margin: "10px 0px" }}
+              />
+            </div>
+            <div className="form-text">
+              <input
+                className="form-submit"
+                type="submit"
+                value="Gửi lời nhắn"
+                style={{ width: "130px", height: "30px", margin: "5px 20px" }}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="contact-infor">
+          <div className="contact-infor-left">
+            {/* Thông tin để tạm chưa biết đưa nội dung gì vào*/}
+            <h3>THÔNG TIN LIÊN HỆ</h3>
+            <br />
+            <div className="text-left">
+              <p>
+                Địa chỉ: Số 1, đường ABC, Phường XYZ, Quận 123, Thành phố Hồ Chí
+                Minh
+              </p>
+              <p>
+                Giờ làm việc: Thứ Hai - Thứ Sáu: 8:00 - 17:00
+                <br />
+                Thứ Bảy: 8:00 - 12:00
+                <br />
+                Chủ Nhật: Nghỉ
+              </p>
+            </div>
+          </div>
+          <div className="contact-infor-right">
+            <h3>LIÊN HỆ VỚI CHÚNG TÔI</h3>
+            <br />
+            <div className="text-right">
+              <p>
+                Email: <a href="mailto:gmd@gmail.vn">gmd@gmail.vn</a>
+              </p>
+              <p>Hotline</p>
+
+              <p>
+                TT Hiến Máu Nhân Đạo: <a href="tel:11111111111">11111111111</a>
+              </p>
+              <p>
+                Bệnh viện BTH: <a href="tel:22222222222">22222222222</a>
+              </p>
+              <p>
+                TT Truyền Máu: <a href="tel:3333333333">3333333333</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
     </>
   );
 }
