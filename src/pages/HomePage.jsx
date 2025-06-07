@@ -1,25 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import logo from "../images/logo.jpeg";
-import banner2 from "../images/banner2.jpeg";
 import image1 from "../images/image1.jpg";
 import "./HomePage.css";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Dropdown from "react-bootstrap/Dropdown";
+import { Button, ButtonGroup } from "react-bootstrap";
+import { logout } from "../assets/authLogout";
+import { getUsernameFromToken } from "../assets/getUserNameFromContex";
+
 export default function HomePage() {
   const [username, setUsername] = useState(null);
 
   useEffect(() => {
-    const loadUser = () => {
-      try {
-        const userData = localStorage.getItem("user");
-        if (!userData || userData === "undefined") return;
-        const user = JSON.parse(userData);
-        setUsername(user?.fullName || "Người dùng");
-      } catch (err) {
-        console.error("Lỗi phân tích user:", err);
-        localStorage.removeItem("user");
-      }
-    };
-    loadUser();
+    const name = getUsernameFromToken();
+    setUsername(name);
   }, []);
   return (
     <>
@@ -112,6 +107,7 @@ export default function HomePage() {
                   </Link>
                 </div>
                 <div className="text-wrapper">
+                  {/* Person Circle Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="16"
@@ -127,7 +123,71 @@ export default function HomePage() {
                     />
                   </svg>
                   {username ? (
-                    <h2>{username}</h2>
+                    <div className="fix-split-button">
+                      <Dropdown as={ButtonGroup}>
+                        <Button variant="success">{username}</Button>
+
+                        <Dropdown.Toggle
+                          split
+                          variant="success"
+                          id="dropdown-split-basic"
+                        />
+
+                        <Dropdown.Menu>
+                          <Dropdown.Item href="#/action-1">
+                            <div className="text-wrapper">
+                              {/* Globe Icon */}
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-person-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                              </svg>
+                              <Link
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#828282",
+                                }}
+                                to="/user-profile"
+                              >
+                                Hồ sơ cá nhân
+                              </Link>
+                            </div>
+                          </Dropdown.Item>
+                          <Dropdown.Item href="#/action-2">
+                            <div className="text-wrapper">
+                              {/* Globe Icon */}
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="16"
+                                height="16"
+                                fill="currentColor"
+                                class="bi bi-calendar-check-fill"
+                                viewBox="0 0 16 16"
+                              >
+                                <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708" />
+                              </svg>
+                              <Link
+                                style={{
+                                  textDecoration: "none",
+                                  color: "#828282",
+                                }}
+                                to="/donorSchedule"
+                              >
+                                Lịch hẹn của bạn
+                              </Link>
+                            </div>
+                          </Dropdown.Item>
+                          <Dropdown.Item href="#/action-3">
+                            <Button onClick={logout}>Logout</Button>
+                          </Dropdown.Item>
+                        </Dropdown.Menu>
+                      </Dropdown>
+                    </div>
                   ) : (
                     <Link
                       style={{ textDecoration: "none", color: "#828282" }}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router"; 
+import { Link } from "react-router";
 import "./Register.css";
 import axios from "axios";
 
@@ -26,6 +26,10 @@ export default function Register() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (formData.password.length < 6) {
+      alert("Mật khẩu có 6 kí tự trở lên");
+      return;
+    }
 
     try {
       const response = await axios.post(

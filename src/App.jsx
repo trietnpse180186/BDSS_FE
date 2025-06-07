@@ -1,8 +1,5 @@
 import { useState } from "react";
 
-import Login from "./pages/Login";
-import HomePage from "./pages/HomePage";
-import { BrowserRouter } from "react-router";
 import WebRoutes from "./routes/WebRoutes";
 
 function App() {
