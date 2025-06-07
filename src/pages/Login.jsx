@@ -21,10 +21,9 @@ export default function LoginForm() {
         }
       );
 
-      const { token, user } = response.data;
-
+      // Lấy token đúng trường
+      const { token, authenticated } = response.data.result;
       localStorage.setItem("token", token);
-      localStorage.setItem("user", JSON.stringify(user));
 
       navigate("/");
     } catch (error) {
@@ -37,24 +36,27 @@ export default function LoginForm() {
 
   return (
     <>
-      <form className="login-wrapper" onSubmit={handleSubmit}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Mật khẩu"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Đăng nhập</button>
-      </form>
-      <Link to="/register">Đăng ký</Link>
+      <div className="login-page">
+        <h1>Đăng nhập</h1>
+        <form className="login-wrapper" onSubmit={handleSubmit}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Mật khẩu"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit">Đăng nhập</button>
+        </form>
+        <Link to="/register">Đăng ký</Link>
+      </div>
     </>
   );
 }
