@@ -7,6 +7,8 @@ import FAQ from "../pages/FAQ";
 import Blog from "../pages/Blog";
 import DonorRegister from "../pages/DonorRegister";
 import Contact from "../pages/Contact";
+import UserProfile from "../pages/UserProfile";
+import DonationSchedule from "../pages/DonationSchedule";
 // import BlogSection from "../components/BlogSection"; // Uncomment if you want to use BlogSection
 export default function WebRoutes() {
   return (
@@ -18,6 +20,8 @@ export default function WebRoutes() {
       <Route path="/blog" element={<Blog />} />
       <Route path="/donor-register" element={<DonorRegister />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/user-profile" element={<UserProfile />} />
+      <Route path="/schedule" element={<DonationSchedule />}></Route>
       {/* <Route path="/blog-section" element={<BlogSection />} /> Uncomment if you want to use BlogSection */}
     </Routes>
   );
