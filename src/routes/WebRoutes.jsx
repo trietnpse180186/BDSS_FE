@@ -9,6 +9,7 @@ import DonorRegister from "../pages/DonorRegister";
 import Contact from "../pages/Contact";
 import DonationSchedule from "../pages/DonationSchedule";
 import BloodRegister from "../pages/BloodRegister";
+import UserProfile from "../pages/UserInfo";
 // import BlogSection from "../components/BlogSection"; // Uncomment if you want to use BlogSection
 export default function WebRoutes() {
   return (
