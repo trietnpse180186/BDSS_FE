@@ -24,7 +24,6 @@ export default function WebRoutes() {
       <Route path="/user-profile" element={<UserProfile />} />
       <Route path="/schedule" element={<DonationSchedule />}></Route>
       <Route path="/blood-registration" element={<BloodRegister />}></Route>
-      {/* <Route path="/blog-section" element={<BlogSection />} /> Uncomment if you want to use BlogSection */}
     </Routes>
   );
 }
