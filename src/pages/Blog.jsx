@@ -3,6 +3,7 @@ import "./Blog.css";
 import { Link } from "react-router";
 import logo from "../images/logo.jpeg";
 import Navbar from "../assets/navbar";
+import Footer from "../assets/footer";
 const posts = [
   {
     id: 1,
@@ -102,6 +103,7 @@ const BlogSection = () => {
           </div>
         </main>
       </div>
+      <Footer />
     </>
   );
 };
