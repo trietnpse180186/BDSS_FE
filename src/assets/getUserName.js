@@ -19,3 +19,17 @@ export function getUsernameFromToken() {
   }
   return null;
 }
+
+export function getUserRole() {
+  const token = localStorage.getItem("token");
+  if (token && token.split(".").length === 3) {
+    try {
+      const decoded = jwtDecode(token);
+      return decoded.role || "Người dùng";
+    } catch (error) {
+      console.error("Token không hợp lệ:", error);
+      return null;
+    }
+  }
+  return null;
+}
