@@ -1,6 +1,7 @@
 import React from "react";
 import "./FAQ.css";
 import Navbar from "../assets/navbar";
+import Footer from "../assets/footer";
 export default function FAQ() {
   const ListFAQ = [
     {
@@ -66,6 +67,7 @@ export default function FAQ() {
           ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 }
