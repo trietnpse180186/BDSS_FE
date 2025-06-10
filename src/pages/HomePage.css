@@ -5,23 +5,9 @@
   font-family: "Roboto", sans-serif;
 }
 
-.overlap {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("../images/banner2.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: 80vh;
-}
-
-.overlap-group {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 .group-header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
 }
 .group-header img {
@@ -36,15 +22,20 @@
   justify-content: center;
   align-items: center;
   font-family: "Roboto", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("../images/banner2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   text-shadow: 1px 1px 3px rgba(122, 121, 121, 0.486);
   gap: 50px;
-  margin-top: 100px;
 }
 .text-wrapper2 h2 {
   font-size: 3em;
   font-weight: bold;
   color: transparent;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
+  margin-top: 100px;
 }
 .wrapper-content p {
   font-size: 1.7em;
@@ -54,11 +45,12 @@
   color: rgb(255, 255, 255);
 }
 .wrapper-button {
-  background-color: rgb(197, 33, 33);
+  background-color: #32b1ff;
   border-radius: 20px;
   padding: 30px 50px;
   font-size: 1.4em;
   font-weight: bold;
+  margin-bottom: 100px;
 }
 .wrapper-button:hover {
   background: linear-gradient(135deg, #bb1509, #2a20ed);
@@ -206,22 +198,6 @@
   color: #dad8d8;
 }
 
-.footer {
-  display: flex;
-  flex-wrap: row;
-  background-color: #2f2f2f;
-  padding: 20px;
-  font-size: 14px;
-  color: #dad8d8;
-  margin-top: 100px;
-  padding: 100px;
-}
-.footer-content {
-  display: flex;
-  flex-direction: row;
-  align-items: space-between;
-  width: 100%;
-}
 .contact-info {
   margin-top: 30px;
   display: flex;

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Login.css";
+import { getUserRole } from "../assets/getUserName";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -24,8 +25,12 @@ export default function LoginForm() {
       // Lấy token đúng trường
       const { token, authenticated } = response.data.result;
       localStorage.setItem("token", token);
-
-      navigate("/");
+      const role = getUserRole(token);
+      if (role == "DONOR") {
+        navigate("/");
+      } else {
+        navigate("/adminPage");
+      }
     } catch (error) {
       console.error("Login error:", error);
       alert(
